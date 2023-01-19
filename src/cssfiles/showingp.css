@@ -1,0 +1,12 @@
+.showingBlogContainer {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid black; */
+  margin: 5px 0px;
+}
+.spanNumbers {
+  font-size: 13px;
+}
+.originalBlog {
+  margin-left: 3px;
+}

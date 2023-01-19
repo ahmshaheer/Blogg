@@ -1,0 +1,52 @@
+.fullBlog {
+  display: flex;
+  flex-direction: column;
+  margin: 13px 150px;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.bHeading {
+  text-decoration: underline;
+}
+
+.btns {
+  margin-top: 13px;
+}
+
+.btnWrite {
+  padding: 4px;
+  background-color: rgb(253, 253, 253);
+  color: rgb(0, 0, 0);
+  margin: 7px 3px;
+  border: none;
+}
+
+.btnWrite:hover {
+  padding: 4px;
+  background-color: rgb(253, 253, 253);
+  color: rgb(0, 0, 0);
+  margin: 7px 3px;
+  text-decoration: underline;
+  border-radius: 44px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  /* resize: none; */
+}
+
+.showingBlog {
+  width: 100vw;
+  height: 30px;
+  border: 2px solid black;
+}
