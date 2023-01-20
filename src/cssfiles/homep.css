@@ -50,3 +50,8 @@ textarea {
   height: 30px;
   border: 2px solid black;
 }
+.editIcon {
+  width: 30px;
+  height: 20px;
+  margin: 13px;
+}

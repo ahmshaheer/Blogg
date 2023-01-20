@@ -8,46 +8,45 @@ const defaultValues = {
 }
 
 const HomePage = () => {
-    const [thoughts, setThoughts] = useState(defaultValues)
-    const [showThought, setShowThought] = useState([])
+    const [words, setWords] = useState(defaultValues)
+    const [showBloggs, setShowBlog] = useState([])
 
-    let { textArea } = thoughts
+    let { textArea } = words
 
     // handle for keep record of text
-    const textAreaHandler = (e) => {
+    const textAreaHandler = e => {
         const { name, value } = e.target
-        setThoughts({ ...thoughts, [name]: value })
+        setWords({ ...words, [name]: value })
     }
 
-    // showing thoughts
+    // showing words
     const showBlog = () => {
         if (!textArea.length) {
             alert('Add something')
         } else {
-            setShowThought([...showThought, thoughts])
-            setThoughts(defaultValues)
+            setShowBlog([...showBloggs, words])
+            setWords(defaultValues)
         }
     }
 
     // delete 
     const deleteSpecific = () => {
-        const copyArr = [...showThought];
+        const copyArr = [...showBloggs];
         copyArr.splice(-1);
-        setShowThought(copyArr);
+        setShowBlog(copyArr);
     }
 
     // clear All
     const clearAllBlogg = () => {
-        setShowThought([])
+        setShowBlog([])
     }
 
     return (
         <div className='fullBlog'>
             <h3 className='bHeading'>Write About Your Blog:</h3>
-
             {/* Writing About Blog */}
-            <textarea rows="14" cols="50" onChange={e => textAreaHandler(e)} name='textArea' value={textArea}></textarea>
-
+            <textarea rows="14" cols="50" onChange={e => textAreaHandler(e)} name='textArea' value={textArea} placeholder='Write something'>
+            </textarea>
             {/* Button */}
             <div className='btns'>
                 <button className='btnWrite' onClick={showBlog}>Submit</button>
@@ -55,7 +54,7 @@ const HomePage = () => {
             </div>
 
             {/* Showing the Blog  */}
-            {showThought.map((show, idx) => <ShowingPage key={idx} numbers={idx + 1} textArea={show.textArea} delfunc={deleteSpecific} />)}
+            {showBloggs.map((show, idx) => <ShowingPage key={idx} numbers={idx + 1} textArea={show.textArea} delfunc={deleteSpecific} />)}
         </div>
     );
 }
