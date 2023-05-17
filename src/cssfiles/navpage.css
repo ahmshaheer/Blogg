@@ -11,7 +11,6 @@
   cursor: pointer;
 }
 .navbar-items-container ul {
-  /* width: 70px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -44,4 +43,23 @@ input[type="text"] {
   width: 20px;
   height: 17px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .main-navbar {
+    flex-direction: column;
+  }
+
+  .navbar-items-container ul {
+    flex-direction: column;
+  }
+
+  .navbar-logo-item {
+    font-size: 25px;
+  }
+
+  .navbar-items-container ul li {
+    width: auto;
+    margin-bottom: 10px;
+  }
 }
