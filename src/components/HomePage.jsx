@@ -100,7 +100,7 @@ const HomePage = () => {
             {showBloggs.map((show, idx) => {
                 return (
                     <div key={idx + 1}>
-                        <input type='checkbox' value={idx + 1} checked={idx.isChecked} onChange={(e) => handleForDelete(e)} />
+                        <input type='checkbox' value={idx} checked={idx.isChecked} onChange={(e) => handleForDelete(e)} />
                         <span className='spanNumbers'>{idx + 1}.</span>
                         <span className='originalBlog'>{show.textArea}</span>
                     </div>
