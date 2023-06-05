@@ -87,7 +87,7 @@ const HomePage = () => {
                 ))}
             </ul>
             {/* Writing About Blog */}
-            <textarea rows="14" cols="50" onChange={e => textAreaHandler(e)} name='textArea' value={textArea} placeholder='Write something'>
+            <textarea rows="12" cols="50" onChange={e => textAreaHandler(e)} name='textArea' value={textArea} placeholder='Write something'>
             </textarea>
             {/* Button */}
             <div className='btns'>

@@ -15,7 +15,7 @@ const ShowingPage = ({ numbers, textArea }) => {
         console.log(value)
     }
     return (
-        <div className='showingBlogContainer' >
+        <div className='showingBlogContainer'>
             <input type='checkbox' value={numbers} checked={numbers.isChecked} onChange={(e) => handleForDelete(e)} />
             <span className='spanNumbers'>{numbers}.</span>
             <span className='originalBlog'>{textArea}</span>
