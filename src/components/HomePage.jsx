@@ -92,8 +92,8 @@ const HomePage = () => {
             {/* Button */}
             <div className='btns'>
                 <button className='btnWrite' onClick={showBlog}>Submit</button>
-                <button className='btnWrite' onClick={clearAllBlogg}>Clear All</button>
                 <button className='btnWrite' onClick={customDelete}>Delete</button>
+                <button className='btnWrite' onClick={clearAllBlogg}>Clear All</button>
             </div>
 
             {/* Showing the Blog  */}

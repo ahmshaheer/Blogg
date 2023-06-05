@@ -3,9 +3,7 @@ import HomePage from './HomePage';
 
 import '../cssfiles/navpage.css'
 
-
 const NavPage = () => {
-
     return (
         <div>
             <div className='main-navbar'>
