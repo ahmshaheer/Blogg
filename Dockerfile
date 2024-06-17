@@ -1,15 +1,20 @@
-FROM node:14 AS build
+# Use the official Node image to create the build artifacts.
+# Use the latest Long Term Support (LTS) version of Node.js
+FROM node:17-alpine
 
+# Set the working directory inside the container
 WORKDIR /app
 
+# Copy the package.json and package-lock.json files
+COPY package.json .
+
+# Install the project dependencies
 RUN npm install
 
-RUN npm run build
+COPY . .
 
+EXPOSE 3000
 
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
+# Start Nginx server
+CMD ["npm", "start"]
 
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
